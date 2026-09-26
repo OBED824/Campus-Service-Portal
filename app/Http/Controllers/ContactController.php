@@ -10,10 +10,17 @@ class ContactController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function contact()
     {
         //
     }
+
+    public function contactlist()
+    {
+        $contacts = Contact::all();
+        return view('contact-list' , compact('contacts'));
+    }
+
 
     /**
      * Show the form for creating a new resource.
